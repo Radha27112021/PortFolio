@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Itim", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #283618;
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4a622c;
+  width: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4a622c;
+  width: 8px;
+}
+
+/* Loader Animation */
+.im {
+  animation: im 1s infinite;
+}
+@keyframes im {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.r {
+  animation: r 1s infinite;
+}
+@keyframes r {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.k {
+  animation: k 1s infinite;
+}
+@keyframes k {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Input css */
+input,
+textarea {
+  height: 40px;
+  border: 1px solid gray;
+  width: 100%;
+  padding-left: 20px;
+}
+input:focus {
+  outline: none;
+  border: 2px solid rgb(56, 56, 56);
+}
+
+textarea {
+  height: 100px;
+}
