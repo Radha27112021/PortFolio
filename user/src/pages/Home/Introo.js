@@ -17,18 +17,13 @@ const Introo = () => {
         {caption || ""}
       </h1>
       <p className="text-tertiary w-2/3">{description || ""}</p>
-
-      <button
-        className="border-2 border-fourth px-10 py-3 rounded text-fifth"
-        onClick={() => {
-          const link = document.createElement("a");
-          link.href = MyResume;
-          link.download = "Radha_Kumari_Resume.pdf";
-          link.click();
-        }}
+      <a
+        href={MyResume}
+        download="Radha_Kumari_Resume.pdf"
+        className=" bg-fourth px-10 py-3 rounded text-tertiary text-xl"
       >
         Download My Resume
-      </button>
+      </a>
     </div>
   );
 };

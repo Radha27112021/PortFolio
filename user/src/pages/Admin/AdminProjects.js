@@ -72,59 +72,59 @@ function AdminProjects() {
           Add Project
         </button>
       </div>
-        <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 mt-5">
-          {project.map((item) => (
-            <div
-              key={item._id}
-              className="border border-gray-700 p-4 bg-gray-800 hover:bg-gray-700 transition-all duration-300 shadow-lg mx-auto"
-            >
-              <h2 className="text-yellow-400 text-xl font-semibold mb-3 hover:text-yellow-500">
-                {item.title}
-              </h2>
-              {/* Technology Used */}
-              <h4 className="text-gray-400 text-lg mb-2 italic">
-                <span className="font-medium">Technology Used:</span>{" "}
-                {item.technologyUsed}
-              </h4>
-              {/* Project Link */}
-              <h2 className="text-blue-400 text-lg font-medium mb-2 hover:underline hover:text-blue-500">
-                <a href={item.link}> {item.link}</a>
-              </h2>
-              {/* Description */}
-              <p className="text-gray-300 text-sm mb-4">{item.description}</p>
+      <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 mt-5">
+        {project.map((item) => (
+          <div
+            key={item._id}
+            className="border border-gray-700 p-4 bg-gray-800 hover:bg-gray-700 transition-all duration-300 shadow-lg mx-auto"
+          >
+            <h2 className="text-yellow-400 text-xl font-semibold mb-3 hover:text-yellow-500">
+              {item.title}
+            </h2>
+            {/* Technology Used */}
+            <h4 className="text-gray-400 text-lg mb-2 italic">
+              <span className="font-medium">Technology Used:</span>{" "}
+              {item.technologyUsed}
+            </h4>
+            {/* Project Link */}
+            <h2 className="text-blue-400 text-lg font-medium mb-2 hover:underline hover:text-blue-500">
+              <a href={item.link}> {item.link}</a>
+            </h2>
+            {/* Description */}
+            <p className="text-gray-300 text-sm mb-4">{item.description}</p>
 
-              <div className="flex justify-end gap-2">
-                {/* Edit Button */}
-                <button
-                  className="bg-blue-900 text-white px-4 py-2 rounded-md transition duration-300 hover:bg-blue-800"
-                  onClick={() => {
-                    setSelectedItemForEdit(item);
-                    setShowAddEditModal(true);
-                    setType("edit");
-                  }}
-                >
-                  Edit
+            <div className="flex justify-end gap-2">
+              {/* Edit Button */}
+              <button
+                className="bg-blue-900 text-white px-4 py-2 rounded-md transition duration-300 hover:bg-blue-800"
+                onClick={() => {
+                  setSelectedItemForEdit(item);
+                  setShowAddEditModal(true);
+                  setType("edit");
+                }}
+              >
+                Edit
+              </button>
+
+              {/* Delete Button */}
+              <Popconfirm
+                title="Are you sure you want to delete this project?"
+                onConfirm={() => onDelete(item)}
+                okText="Yes"
+                cancelText="No"
+              >
+                <button className="bg-red-800 text-white px-4 py-2 rounded-md transition duration-300 hover:bg-red-700">
+                  Delete
                 </button>
-
-                {/* Delete Button */}
-                <Popconfirm
-                  title="Are you sure you want to delete this project?"
-                  onConfirm={() => onDelete(item)}
-                  okText="Yes"
-                  cancelText="No"
-                >
-                  <button className="bg-red-800 text-white px-4 py-2 rounded-md transition duration-300 hover:bg-red-700">
-                    Delete
-                  </button>
-                </Popconfirm>
-              </div>
+              </Popconfirm>
             </div>
+          </div>
         ))}
       </div>
 
       {(type === "add" || selectedItemForEdit) && (
         <Modal
-          visible={showAddEditModal}
+          open={showAddEditModal}
           title={selectedItemForEdit ? "Edit Project" : "Add Project"}
           footer={null}
           onCancel={() => {

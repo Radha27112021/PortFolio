@@ -37,7 +37,7 @@ function Contact() {
             </li>
           </ul>
           <a
-            href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlFlgnTMDJDcLqSpkdwmqTjnKkdRwkSpTZbzrfrGXbFPclcbtSBbqwjNcFwvtVHnmRphHg"
+            href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=radha.050903@gmail.com&tf=1"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-500 text-3xl p-3 mt-5 rounded-lg hover:bg-blue-600 transition duration-300 text-center block"

@@ -180,22 +180,25 @@ router.post("/admin-login", async (req, res) => {
       username: req.body.username,
       password: req.body.password,
     });
-    user.password = "";
+
     if (user) {
+      const userWithoutPassword = { ...user.toObject(), password: undefined };
       res.status(200).send({
-        data: user,
+        data: userWithoutPassword,
         success: true,
         message: "Login successful",
       });
     } else {
       res.status(200).send({
-        data: user,
+        data: null,
         success: false,
         message: "Invalid username or password",
       });
     }
   } catch (error) {
-    res.status(500).send(error);
+    console.error("Error during admin login:", error);
+    res.status(500).send({ error: "An error occurred during login" });
   }
 });
+
 module.exports = router;

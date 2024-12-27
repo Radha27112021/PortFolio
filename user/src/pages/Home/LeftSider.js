@@ -20,7 +20,7 @@ function LeftSider() {
             <i className="ri-github-line text-xl text-icon hover:text-white"></i>
           </a>
           <a
-            href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlFlgnTMDJDcLqSpkdwmqTjnKkdRwkSpTZbzrfrGXbFPclcbtSBbqwjNcFwvtVHnmRphHg"
+            href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=radha.050903@gmail.com&tf=1"
             target="_blank"
             rel="noopener noreferrer"
           >

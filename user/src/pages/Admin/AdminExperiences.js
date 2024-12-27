@@ -117,7 +117,7 @@ function AdminExperiences() {
       </div>
       {(type === "add" || selectedItemForEdit) && (
         <Modal
-          visible={showAddEditModal}
+          open={showAddEditModal}
           title={selectedItemForEdit ? "Edit Experience" : "Add Experience"}
           footer={null}
           onCancel={() => {
