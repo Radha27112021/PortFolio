@@ -7,13 +7,9 @@
     "npm": "10.9.0"
   },
   "scripts": {
-    "client-install": "npm install",
-    "server": "nodemon server.js",
-    "client": "npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server.js",
-    "predeploy": "npm run build",
-    "vercel-build": "npm run build "
+    "dev": "nodemon server/server.js",
+    "build": "npm install && npm install --prefix user && npm run build --prefix user",
+    "start": "nodemon server/server.js"
   },
   "author": "",
   "license": "ISC",

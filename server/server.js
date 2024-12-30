@@ -1,7 +1,6 @@
 import express from "express";
 import path from "path";
 import dotenv from "dotenv";
-import { fileURLToPath } from "url";
 import portfolioRoute from "./routes/portfolioRoutes.js";
 import dbConfig from "./config/dbConfig.js";
 
